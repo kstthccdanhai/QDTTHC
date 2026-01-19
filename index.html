@@ -1,38 +1,22 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kho Tài Liệu Cá Nhân</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Đang kết nối Drive...</title>
     <script>
-        const CONFIG = {
-            apiKey: 'AIzaSyCrplAFEKKT9qn-mRF18qfNEbDa90NO0S8',
-            clientId: '235560315556-1l05hu1cr0sbts74ba4g9ijvbs06fmo8.apps.googleusercontent.com',
-            rootFolderId: '12me7P6FmgB8vYGWCKe343SaD-3SPDzks'
-        };
-
-        function init() {
-            localStorage.setItem('apiKey', CONFIG.apiKey);
-            localStorage.setItem('clientId', CONFIG.clientId);
-            localStorage.setItem('rootFolderId', CONFIG.rootFolderId);
-        }
-        init();
+        // Tự động ghi mã vào trình duyệt ngay khi mở trang
+        localStorage.setItem('apiKey', 'AIzaSyCrplAFEKKT9qn-mRF18qfNEbDa90NO0S8');
+        localStorage.setItem('clientId', '235560315556-1l05hu1cr0sbts74ba4g9ijvbs06fmo8.apps.googleusercontent.com');
+        localStorage.setItem('rootFolderId', '12me7P6FmgB8vYGWCKe343SaD-3SPDzks');
+        
+        // Tự động chuyển đến trang đăng nhập sau 1 giây
+        setTimeout(function(){
+            window.location.href = "https://tranviethong.github.io/gdrive-index/#/login";
+        }, 1000);
     </script>
 </head>
-<body class="bg-slate-50 font-sans">
-    <div class="min-h-screen flex flex-col items-center justify-center px-4">
-        <div class="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full text-center">
-            <h1 class="text-2xl font-bold text-slate-800 mb-2">Hệ Thống Tài Liệu</h1>
-            <p class="text-slate-500 mb-8">Kết nối trực tiếp với Google Drive của bạn</p>
-            
-            <a href="https://tranviethong.github.io/gdrive-index/#/login" 
-               class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all shadow-lg hover:shadow-blue-200">
-               MỞ KHO TÀI LIỆU
-            </a>
-            
-            <p class="mt-6 text-xs text-slate-400">ID Thư mục: 12me7P6...Dzks</p>
-        </div>
-    </div>
+<body style="text-align:center; padding-top:50px; font-family:sans-serif;">
+    <h2>Đang thiết lập kết nối an toàn đến Google Drive...</h2>
+    <p>Vui lòng đợi trong giây lát.</p>
 </body>
 </html>
